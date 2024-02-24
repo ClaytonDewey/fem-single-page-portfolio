@@ -1,13 +1,14 @@
 import React from 'react';
-import { SiteIdentity } from './';
+import { Header } from './';
 
 type AppProps = {};
 
 const App: React.FC<AppProps> = () => {
   return (
-    <div className='container'>
-      <SiteIdentity />
-    </div>
+    <>
+      <Header />
+      <main className='container'></main>
+    </>
   );
 };
 export default App;
