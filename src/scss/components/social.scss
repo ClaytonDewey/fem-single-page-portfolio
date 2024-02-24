@@ -1,0 +1,23 @@
+@use '../util' as *;
+
+.social {
+  &__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(24);
+
+    a {
+      svg {
+        fill: var(--clr-white);
+        transition: var(--transition);
+      }
+
+      &:hover {
+        svg {
+          fill: var(--link-hover);
+        }
+      }
+    }
+  }
+}
