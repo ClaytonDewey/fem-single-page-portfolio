@@ -1,0 +1,27 @@
+@use '../util/' as *;
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding: 0;
+  margin: 0;
+
+  &__rings {
+    position: absolute;
+    right: 50%;
+    top: rem(130);
+    z-index: -1;
+    height: auto;
+  }
+
+  &__circle {
+    position: relative;
+    top: rem(171);
+    margin-bottom: rem(-129);
+    translate: calc(100vw - rem(64) - rem(16));
+  }
+}
