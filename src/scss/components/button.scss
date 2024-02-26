@@ -1,0 +1,22 @@
+@use '../util' as *;
+
+.btn {
+  &__primary {
+    // background-color: lightpink;
+    display: inline-flex;
+    color: var(--clr-white);
+    width: auto;
+    font-size: rem(16);
+    font-weight: 700;
+    line-height: rem(26);
+    letter-spacing: rem(2.29);
+    text-transform: uppercase;
+    padding-bottom: rem(10);
+    border-bottom: 2px solid var(--clr-success);
+    transition: var(--transition);
+
+    &:hover {
+      color: var(--clr-success);
+    }
+  }
+}
