@@ -1,0 +1,44 @@
+@use '../util' as *;
+
+.hero {
+  width: 100%;
+  overflow-x: hidden;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    display: block;
+    background-attachment: fixed;
+    z-index: 1;
+  }
+
+  &::before {
+    background-image: url('../../../public/images/pattern-rings.svg');
+    background-repeat: no-repeat;
+    top: rem(124);
+    left: rem(-340);
+    height: rem(129);
+    width: rem(530);
+  }
+
+  &::after {
+    background-image: url('../../../public/images/pattern-circle.svg');
+    background-repeat: no-repeat;
+    height: rem(129);
+    width: rem(129);
+    top: rem(254);
+    right: rem(-65);
+  }
+}
+
+.profile {
+  &-img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: rem(174);
+  }
+}

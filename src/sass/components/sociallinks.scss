@@ -1,0 +1,40 @@
+@use '../util' as *;
+
+.social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: rem(20);
+
+  p {
+    font: normal normal 700 #{rem(24)} / #{rem(32)} var(--ff-primary);
+    letter-spacing: rem(-0.33);
+    text-align: center;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    gap: rem(26);
+  }
+
+  @include breakpoint(tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: rem(30);
+    gap: 0;
+
+    p {
+      font-size: rem(32);
+      letter-spacing: rem(-0.44);
+      text-align: left;
+    }
+
+    &__links {
+      gap: rem(32);
+    }
+  }
+}

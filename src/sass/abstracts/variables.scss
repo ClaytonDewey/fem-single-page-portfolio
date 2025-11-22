@@ -1,0 +1,18 @@
+@use '../util' as *;
+
+:root {
+  // Colors
+  --color-primary: #4ee1a0;
+  --clr-black: #151515;
+  --clr-gray-dark: #242424;
+  --clr-gray-light: #d9d9d9;
+  --clr-white: #ffffff;
+
+  // Typography
+  --ff-primary: 'Space Grotesk', sans-serif;
+
+  --heading-xl: normal normal 700 #{rem(88)} / #{rem(88)} var(--ff-primary);
+  --heading-l: normal normal 700 #{rem(48)} / #{rem(56)} var(--ff-primary);
+  --heading-m: normal normal 700 #{rem(24)} / #{rem(32)} var(--ff-primary);
+  --body: normal normal 400 #{rem(18)} / #{rem(28)} var(--ff-primary);
+}
