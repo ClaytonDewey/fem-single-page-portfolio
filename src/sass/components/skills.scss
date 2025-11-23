@@ -1,0 +1,87 @@
+@use '../util' as *;
+
+.skills {
+  width: 100%;
+  max-width: var(--max-width);
+  padding-inline: rem(16);
+  margin-inline: auto;
+  margin-block-end: rem(80);
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    height: rem(1);
+    background: var(--clr-white);
+  }
+
+  &__wrapper {
+    padding-block: rem(40);
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+  }
+
+  @include breakpoint(tablet) {
+    padding-inline: rem(30);
+
+    &::after {
+      display: none;
+    }
+
+    &__wrapper {
+      padding-block-start: rem(52);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-column-gap: rem(32);
+      grid-row-gap: rem(52);
+    }
+  }
+
+  @include breakpoint(desktop) {
+    padding: 0;
+
+    &__wrapper {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 58px;
+    }
+  }
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: rem(1);
+
+  &-name {
+    font-size: rem(32);
+    line-height: rem(40);
+    letter-spacing: rem(-1);
+    margin: 0;
+    padding: 0;
+  }
+
+  &-years {
+    font-size: rem(16);
+    line-height: rem(26);
+    font-weight: 400;
+  }
+
+  @include breakpoint(tablet) {
+    gap: rem(14);
+    text-align: left;
+
+    &-name {
+      font: var(--heading-l);
+      letter-spacing: rem(-1.5);
+    }
+
+    &-years {
+      font: var(--body);
+    }
+  }
+}

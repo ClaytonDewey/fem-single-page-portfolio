@@ -1,0 +1,140 @@
+@use '../util' as *;
+
+.projects {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: rem(40);
+    padding-inline: rem(16);
+    padding-block-end: rem(80);
+
+    @include breakpoint(tablet) {
+      padding-inline: rem(30);
+      gap: rem(60);
+      padding-block-end: rem(100);
+    }
+
+    @include breakpoint(desktop) {
+      padding: 0;
+      max-width: var(--max-width);
+      margin-inline: auto;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h2 {
+      font-size: rem(40);
+      line-height: rem(40);
+      letter-spacing: rem(-1.14);
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: rem(40);
+
+    @include breakpoint(tablet) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-column-gap: rem(22);
+      grid-row-gap: rem(60);
+    }
+
+    @include breakpoint(tablet) {
+      grid-column-gap: rem(30);
+      grid-row-gap: rem(69);
+    }
+  }
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: rem(20);
+  position: relative;
+
+  &__image {
+    .project__buttons {
+      display: none;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: rem(7);
+
+    h3 {
+      font: var(--heading-m);
+    }
+  }
+
+  &__tools {
+    display: flex;
+    align-items: center;
+    gap: rem(18);
+    text-transform: uppercase;
+    font: var(--body);
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: rem(30);
+  }
+
+  @include breakpoint(tablet) {
+    min-width: rem(342);
+  }
+
+  @include breakpoint(desktop) {
+    &__image {
+      position: relative;
+      cursor: pointer;
+
+      .project__buttons {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: rem(48);
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 20;
+        opacity: 0;
+        transition: var(--transition);
+      }
+
+      &::before {
+        position: absolute;
+        content: '';
+        display: block;
+        height: 100%;
+        width: 100%;
+        background: var(--overlay-bg);
+        opacity: 0;
+        transition: var(--transition);
+      }
+
+      &:hover {
+        .project__buttons {
+          opacity: 1;
+        }
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &__buttons {
+    display: none;
+  }
+}

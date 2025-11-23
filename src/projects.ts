@@ -1,0 +1,58 @@
+const projects = [
+  {
+    id: 1,
+    name: 'Design Portfolio',
+    tools: ['HTML', 'CSS'],
+    image: 'thumbnail-project-1-large.webp',
+    thumbnail: 'thumbnail-project-1-small.webp',
+    projectUrl: '#',
+    projectCode: '#',
+  },
+  {
+    id: 2,
+    name: 'E-Learning Landing Page',
+    tools: ['HTML', 'CSS'],
+    image: 'thumbnail-project-2-large.webp',
+    thumbnail: 'thumbnail-project-2-small.webp',
+    projectUrl: '#',
+    projectCode: '#',
+  },
+  {
+    id: 3,
+    name: 'TODO Web App',
+    tools: ['HTML', 'CSS', 'JavaScript'],
+    image: 'thumbnail-project-3-large.webp',
+    thumbnail: 'thumbnail-project-3-small.webp',
+    projectUrl: '#',
+    projectCode: '#',
+  },
+  {
+    id: 4,
+    name: 'Entertainment Web App',
+    tools: ['HTML', 'CSS', 'JavaScript'],
+    image: 'thumbnail-project-4-large.webp',
+    thumbnail: 'thumbnail-project-4-small.webp',
+    projectUrl: '#',
+    projectCode: '#',
+  },
+  {
+    id: 5,
+    name: 'Memory Game',
+    tools: ['HTML', 'CSS', 'JavaScript'],
+    image: 'thumbnail-project-5-large.webp',
+    thumbnail: 'thumbnail-project-5-small.webp',
+    projectUrl: '#',
+    projectCode: '#',
+  },
+  {
+    id: 6,
+    name: 'Art Gallery Showcase',
+    tools: ['HTML', 'CSS', 'JavaScript'],
+    image: 'thumbnail-project-6-large.webp',
+    thumbnail: 'thumbnail-project-6-small.webp',
+    projectUrl: '#',
+    projectCode: '#',
+  },
+];
+
+export default projects;
