@@ -1,21 +1,26 @@
 @use '../util' as *;
 
 .hero {
+  display: flex;
+  flex-direction: column;
+  gap: rem(40);
   width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  position: relative;
   overflow-x: hidden;
+  padding-inline: rem(16);
+  padding-block-end: rem(80);
 
   &::before,
   &::after {
-    position: absolute;
     content: '';
+    position: absolute;
     display: block;
-    background-attachment: fixed;
-    z-index: 1;
   }
 
   &::before {
-    background-image: url('../../../public/images/pattern-rings.svg');
-    background-repeat: no-repeat;
+    background-image: var(--header-bg-start);
     top: rem(124);
     left: rem(-340);
     height: rem(129);
@@ -23,22 +28,119 @@
   }
 
   &::after {
-    background-image: url('../../../public/images/pattern-circle.svg');
-    background-repeat: no-repeat;
-    height: rem(129);
-    width: rem(129);
+    background-image: var(--header-bg-end);
     top: rem(254);
     right: rem(-65);
+    height: rem(129);
+    width: rem(129);
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: rem(24);
+    text-align: center;
+    font-size: rem(16);
+    line-height: rem(26);
+    letter-spacing: normal;
+
+    h1 {
+      font-size: rem(40);
+      line-height: rem(40);
+      letter-spacing: rem(-1.14);
+
+      span {
+        border-bottom: rem(4) solid var(--clr-primary);
+      }
+    }
+  }
+
+  @include breakpoint(tablet) {
+    height: rem(660);
+    padding-block-end: rem(60);
+    flex-direction: row;
+
+    &::before {
+      top: rem(86);
+      transform: translateY(0);
+    }
+
+    &::after {
+      top: rem(468);
+    }
+
+    &__text {
+      width: rem(445);
+      align-items: flex-start;
+      justify-content: flex-end;
+      text-align: left;
+      font: var(--body);
+      gap: 0;
+      z-index: 100;
+
+      h1 {
+        font-size: rem(72);
+        line-height: rem(72);
+        letter-spacing: rem(-2.05);
+        margin-bottom: rem(60);
+
+        span {
+          border-width: rem(6);
+        }
+      }
+
+      p {
+        margin-block-end: rem(34);
+      }
+    }
+  }
+
+  @include breakpoint(desktop) {
+    height: rem(720);
+    overflow: visible;
+    padding: 0;
+    align-items: center;
+
+    &::before {
+      top: rem(133);
+    }
+
+    &::after {
+      top: rem(521);
+      right: rem(384);
+    }
+
+    &__text {
+      width: 100%;
+
+      h1 {
+        width: rem(720);
+        font: var(--heading-xl);
+      }
+
+      p {
+        width: rem(445);
+      }
+    }
   }
 }
 
 .profile {
-  &-img {
+  position: relative;
+  display: block;
+  width: rem(174);
+  margin-inline: auto;
+
+  @include breakpoint(tablet) {
     position: absolute;
+    right: 0;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    display: block;
-    width: rem(174);
+    width: rem(322);
+  }
+
+  @include breakpoint(desktop) {
+    width: rem(445);
   }
 }

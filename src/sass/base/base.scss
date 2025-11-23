@@ -23,11 +23,6 @@ body {
 
 body {
   position: relative;
-  padding-block-start: rem(20);
-
-  @include breakpoint(tablet) {
-    padding-block-start: rem(30);
-  }
 }
 
 .sr-only {
@@ -38,4 +33,10 @@ body {
   overflow: hidden;
   position: absolute;
   white-space: nowrap;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }

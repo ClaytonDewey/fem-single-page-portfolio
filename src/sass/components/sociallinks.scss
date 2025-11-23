@@ -1,10 +1,16 @@
 @use '../util' as *;
 
 .social {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-block-start: rem(20);
   gap: rem(20);
 
   p {
@@ -19,6 +25,17 @@
     justify-content: center;
     list-style-type: none;
     gap: rem(26);
+
+    a {
+      svg path {
+        transition: var(--transition);
+      }
+      &:hover {
+        svg path {
+          fill: var(--clr-primary);
+        }
+      }
+    }
   }
 
   @include breakpoint(tablet) {
@@ -26,6 +43,7 @@
     justify-content: space-between;
     padding-inline: rem(30);
     gap: 0;
+    z-index: 100;
 
     p {
       font-size: rem(32);
@@ -36,5 +54,10 @@
     &__links {
       gap: rem(32);
     }
+  }
+
+  @include breakpoint(desktop) {
+    margin-block-start: rem(40);
+    padding-inline: rem(0);
   }
 }

@@ -2,11 +2,15 @@
 
 :root {
   // Colors
-  --color-primary: #4ee1a0;
+  --clr-primary: #4ee1a0;
   --clr-black: #151515;
   --clr-gray-dark: #242424;
   --clr-gray-light: #d9d9d9;
   --clr-white: #ffffff;
+
+  // Header Background
+  --header-bg-start: url(../../../public/images/pattern-rings.svg);
+  --header-bg-end: url(../../../public/images/pattern-circle.svg);
 
   // Typography
   --ff-primary: 'Space Grotesk', sans-serif;
@@ -15,4 +19,16 @@
   --heading-l: normal normal 700 #{rem(48)} / #{rem(56)} var(--ff-primary);
   --heading-m: normal normal 700 #{rem(24)} / #{rem(32)} var(--ff-primary);
   --body: normal normal 400 #{rem(18)} / #{rem(28)} var(--ff-primary);
+
+  // Page Layout
+  --max-width: #{rem(1110)};
+
+  // Transitions
+  @media (prefers-reduced-motion: no-preference) {
+    --transition: all 0.3s ease-in-out;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    --transition: none;
+  }
 }
