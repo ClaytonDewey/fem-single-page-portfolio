@@ -12,6 +12,8 @@
 
   .social {
     margin-block-start: rem(39);
+    max-width: var(--max-width);
+    margin-inline: auto;
   }
 
   &__wrapper {
@@ -37,6 +39,10 @@
     > form {
       flex: 1 1 50%;
     }
+  }
+  hr {
+    max-width: var(--max-width);
+    margin-inline: auto;
   }
 
   &__header {
