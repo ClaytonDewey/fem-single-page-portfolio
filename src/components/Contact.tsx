@@ -42,8 +42,25 @@ const Contact = () => {
     e.preventDefault();
     if (validateInput()) {
       // Handle form submission logic here
-      toast.success(
-        'Successful Submission. This is not a live site. Message is not really being sent.'
+      toast(
+        (t) => (
+          <div className='success-toast'>
+            <h2>This is not a live site.</h2>
+            Message is not really being sent right now.
+            <Button
+              className='btn btn-toast'
+              onClick={() => toast.dismiss(t.id)}>
+              <Icon name='close' />
+            </Button>
+          </div>
+        ),
+        {
+          style: {
+            background: 'var(--clr-gray-light)',
+            color: 'var(--clr-black)',
+            boxShadow: 'var(--box-shadow)',
+          },
+        }
       );
       setErrors({});
       // Reset form

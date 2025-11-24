@@ -1,5 +1,6 @@
 import {
   IconCircle,
+  IconClose,
   IconFrontendMentor,
   IconGithub,
   IconInfo,
@@ -12,6 +13,8 @@ const Icon = ({ name }: { name: string }) => {
   switch (name) {
     case 'circle':
       return <IconCircle />;
+    case 'close':
+      return <IconClose />;
     case 'frontendmentor':
       return <IconFrontendMentor />;
     case 'github':

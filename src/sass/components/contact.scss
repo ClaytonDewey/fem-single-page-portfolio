@@ -141,3 +141,12 @@
     }
   }
 }
+
+.success-toast {
+  padding: rem(16);
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: rem(24);
+}

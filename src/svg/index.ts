@@ -1,4 +1,5 @@
 export { default as IconCircle } from './Circle';
+export { default as IconClose } from './Close';
 export { default as IconFrontendMentor } from './FrontendMentor';
 export { default as IconGithub } from './Github';
 export { default as Icon } from './icon';
