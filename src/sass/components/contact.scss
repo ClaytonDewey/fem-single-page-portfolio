@@ -1,0 +1,97 @@
+@use '../util' as *;
+
+.contact {
+  background-color: var(--clr-gray-dark);
+  padding-block: rem(60);
+  padding-inline: rem(16);
+
+  @include breakpoint(tablet) {
+    padding-inline: rem(30);
+    padding-block-end: rem(40);
+  }
+
+  .social {
+    margin-block-start: rem(39);
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: rem(50);
+    width: 100%;
+    margin-inline: auto;
+
+    @include breakpoint(tablet) {
+      max-width: rem(445);
+    }
+
+    @include breakpoint(desktop) {
+      max-width: var(--max-width);
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: rem(220);
+    }
+
+    > div,
+    > form {
+      flex: 1 1 50%;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: rem(20);
+
+    h2 {
+      font-size: rem(40);
+      line-height: rem(40);
+      letter-spacing: rem(-1.14);
+    }
+
+    p {
+      font-size: rem(16);
+      line-height: rem(26);
+    }
+
+    @include breakpoint(tablet) {
+      align-items: flex-start;
+      text-align: left;
+      h2 {
+        font-size: rem(72);
+        line-height: rem(72);
+        letter-spacing: rem(-2.05);
+      }
+
+      p {
+        font: var(--body);
+      }
+    }
+
+    @breakpoint (desktop) {
+      h2 {
+        font: var(--heading-xl);
+        letter-spacing: rem(-2.5);
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: rem(32);
+    margin-block-end: rem(87);
+
+    .btn {
+      align-self: flex-end;
+    }
+
+    @include breakpoint(tablet) {
+      margin-block-end: rem(92);
+    }
+  }
+}

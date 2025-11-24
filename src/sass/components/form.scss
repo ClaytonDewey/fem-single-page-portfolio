@@ -1,0 +1,28 @@
+@use '../util' as *;
+
+input,
+textarea {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  width: 100%;
+  font-family: inherit;
+  font-size: rem(16);
+  line-height: rem(26);
+  letter-spacing: rem(-0.22);
+  border-bottom: rem(1) solid var(--clr-white);
+  padding-inline: rem(24);
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+input {
+  height: rem(43);
+}
+
+textarea {
+  height: rem(107);
+}
