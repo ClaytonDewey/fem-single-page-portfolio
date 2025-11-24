@@ -1,18 +1,30 @@
 @use '../util' as *;
 
 .skills {
+  position: relative;
   width: 100%;
   max-width: var(--max-width);
   padding-inline: rem(16);
   margin-inline: auto;
-  margin-block-end: rem(80);
+  padding-block-end: rem(80);
+  overflow-x: hidden;
 
-  &::before,
-  &::after {
+  &::before {
     content: '';
     display: block;
     height: rem(1);
     background: var(--clr-white);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    background-image: var(--header-bg-start);
+    bottom: rem(15);
+    right: rem(-340);
+    height: rem(129);
+    width: rem(530);
   }
 
   &__wrapper {
@@ -25,8 +37,13 @@
   @include breakpoint(tablet) {
     padding-inline: rem(30);
 
-    &::after {
+    hr {
       display: none;
+    }
+
+    &::after {
+      bottom: initial;
+      top: rem(387);
     }
 
     &__wrapper {
@@ -41,6 +58,11 @@
 
   @include breakpoint(desktop) {
     padding: 0;
+
+    &::after {
+      bottom: initial;
+      top: rem(253);
+    }
 
     &__wrapper {
       grid-template-columns: repeat(3, 1fr);

@@ -23,6 +23,10 @@ body {
 
 body {
   position: relative;
+
+  @include breakpoint(desktop) {
+    overflow-x: hidden;
+  }
 }
 
 .sr-only {

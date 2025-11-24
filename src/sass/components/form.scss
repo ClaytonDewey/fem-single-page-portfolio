@@ -13,9 +13,25 @@ textarea {
   letter-spacing: rem(-0.22);
   border-bottom: rem(1) solid var(--clr-white);
   padding-inline: rem(24);
+  transition: var(--transition);
+  color: var(--clr-white);
 
   &::placeholder {
     color: rgba(255, 255, 255, 0.5);
+    transition: var(--transition);
+  }
+
+  &:hover {
+    border-bottom-color: var(--clr-primary);
+    &::placeholder {
+      color: rgba(78, 225, 160, 0.65);
+    }
+  }
+
+  &:focus {
+    outline: rem(1) solid var(--input-outline);
+    border-bottom-color: var(--clr-primary);
+    box-shadow: var(--box-shadow);
   }
 }
 
@@ -25,4 +41,23 @@ input {
 
 textarea {
   height: rem(107);
+}
+
+.is-invalid {
+  position: absolute;
+  display: block;
+  right: 0;
+  font-size: rem(12);
+  line-height: rem(16);
+  letter-spacing: rem(-0.17);
+  color: var(--clr-error);
+  margin-block-start: rem(5);
+
+  &.icon {
+    top: 50%;
+    transform: translateY(-50%);
+    width: rem(24);
+    height: rem(24);
+    fill: var(--clr-error);
+  }
 }
