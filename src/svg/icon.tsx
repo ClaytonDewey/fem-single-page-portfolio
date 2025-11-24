@@ -2,6 +2,7 @@ import {
   IconCircle,
   IconFrontendMentor,
   IconGithub,
+  IconInfo,
   IconLinkedIn,
   IconRings,
   IconTwitter,
@@ -15,6 +16,8 @@ const Icon = ({ name }: { name: string }) => {
       return <IconFrontendMentor />;
     case 'github':
       return <IconGithub />;
+    case 'info':
+      return <IconInfo />;
     case 'linkedin':
       return <IconLinkedIn />;
     case 'rings':
