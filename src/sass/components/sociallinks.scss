@@ -23,10 +23,14 @@
     gap: rem(26);
 
     a {
+      border-radius: 50%;
       svg path {
         transition: var(--transition);
       }
-      &:hover {
+      &:hover,
+      &:focus {
+        outline: rem(1) solid var(--input-outline);
+        box-shadow: var(--box-shadow);
         svg path {
           fill: var(--clr-primary);
         }
