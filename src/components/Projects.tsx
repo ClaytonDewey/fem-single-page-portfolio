@@ -1,4 +1,4 @@
-import { Project } from '.';
+import { Project, ScrollButton } from '.';
 import projects from '../projects';
 
 const Projects = () => {
@@ -6,9 +6,7 @@ const Projects = () => {
     <section className='projects__wrapper'>
       <header className='projects__header'>
         <h2>Projects</h2>
-        <a href='#contact' className='btn btn-primary'>
-          Contact Me
-        </a>
+        <ScrollButton text='Contact Me' />
       </header>
       <div className='projects__body'>
         {projects.map(

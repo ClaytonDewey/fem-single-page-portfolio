@@ -1,4 +1,4 @@
-import { HeaderImage, SocialLinks } from '.';
+import { HeaderImage, ScrollButton, SocialLinks } from '.';
 
 const Hero = () => {
   return (
@@ -13,9 +13,7 @@ const Hero = () => {
           Based in the UK, I&rsquo;m a front-end developer passionate about
           building accessible web apps that users love.
         </p>
-        <a href='#contact' className='btn btn-primary'>
-          Contact Me
-        </a>
+        <ScrollButton text='Contact Me' />
       </div>
     </header>
   );
