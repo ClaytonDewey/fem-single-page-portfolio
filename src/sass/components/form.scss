@@ -2,6 +2,10 @@
 
 input,
 textarea {
+  --webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
   display: flex;
   align-items: center;
   background: transparent;

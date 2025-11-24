@@ -1,6 +1,10 @@
 @use '../util' as *;
 
 .btn {
+  --webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
