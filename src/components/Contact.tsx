@@ -10,39 +10,42 @@ const Contact = () => {
     message: '',
   });
 
-  const [inputError, setInputError] = useState('');
+  const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-    setInputError('');
+    setErrors({ ...errors, [name]: '' });
   };
 
   const validateInput = () => {
+    const newErrors: { [key: string]: string } = {};
+
     if (formData.name === '') {
-      setInputError('Please enter your name.');
-      return false;
+      newErrors.name = 'Please enter your name.';
     }
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
-      setInputError('Please enter a valid email address.');
-      return false;
+      newErrors.email = 'Please enter a valid email address.';
     }
     if (formData.message === '') {
-      setInputError('Please enter your message.');
-      return false;
+      newErrors.message = 'Please enter your message.';
     }
-    return true;
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (validateInput()) {
       // Handle form submission logic here
-      toast.success('Message sent successfully!');
-      setInputError('');
+      toast.success(
+        'Successful Submission. This is not a live site. Message is not really being sent.'
+      );
+      setErrors({});
       // Reset form
       setFormData({ name: '', email: '', message: '' });
     } else {
@@ -72,7 +75,7 @@ const Contact = () => {
           <form className='contact__form' onSubmit={handleSubmit}>
             <div
               className={`contact__form-group ${
-                inputError ? 'is-invalid-input' : ''
+                errors.name ? 'is-invalid-input' : ''
               }`}>
               <label className='sr-only' htmlFor='name'>
                 Name
@@ -85,20 +88,20 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleChange}
               />
-              {inputError && (
+              {errors.name && (
                 <>
                   <div className='is-invalid icon'>
                     <Icon name='info' />
                   </div>
                   <div className='is-invalid'>
-                    <p className='error-message'>{inputError}</p>
+                    <p className='error-message'>{errors.name}</p>
                   </div>
                 </>
               )}
             </div>
             <div
               className={`contact__form-group ${
-                inputError ? 'is-invalid-input' : ''
+                errors.email ? 'is-invalid-input' : ''
               }`}>
               <label className='sr-only' htmlFor='email'>
                 Email
@@ -111,20 +114,20 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
               />
-              {inputError && (
+              {errors.email && (
                 <>
                   <div className='is-invalid icon'>
                     <Icon name='info' />
                   </div>
                   <div className='is-invalid'>
-                    <p className='error-message'>{inputError}</p>
+                    <p className='error-message'>{errors.email}</p>
                   </div>
                 </>
               )}
             </div>
             <div
               className={`contact__form-group ${
-                inputError ? 'is-invalid-input' : ''
+                errors.message ? 'is-invalid-input' : ''
               }`}>
               <label className='sr-only' htmlFor='message'>
                 Message
@@ -135,13 +138,13 @@ const Contact = () => {
                 placeholder='Your message'
                 value={formData.message}
                 onChange={handleChange}></textarea>
-              {inputError && (
+              {errors.message && (
                 <>
                   <div className='is-invalid icon'>
                     <Icon name='info' />
                   </div>
                   <div className='is-invalid'>
-                    <p className='error-message'>{inputError}</p>
+                    <p className='error-message'>{errors.message}</p>
                   </div>
                 </>
               )}
