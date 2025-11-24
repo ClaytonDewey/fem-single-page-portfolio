@@ -16,6 +16,7 @@
 
     @include breakpoint(desktop) {
       padding: 0;
+      padding-block-start: rem(140);
       padding-block-end: rem(139);
       max-width: var(--max-width);
       margin-inline: auto;
