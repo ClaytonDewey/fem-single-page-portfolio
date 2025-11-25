@@ -29,6 +29,9 @@
   --box-shadow: 0 0 #{rem(15)} rgba(78, 225, 160, 0.5);
   --box-shadow-error: 0 0 #{rem(15)} rgba(255, 111, 91, 0.5);
 
+  --placeholder: rgba(255, 255, 255, 0.5);
+  --placeholder-hover: rgba(78, 225, 160, 0.65);
+
   --input-outline: rgba(78, 225, 160, 0.25);
   --input-outline-error: rgba(255, 111, 91, 0.25);
 

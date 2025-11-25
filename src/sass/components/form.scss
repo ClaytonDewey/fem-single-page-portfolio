@@ -21,14 +21,14 @@ textarea {
   color: var(--clr-white);
 
   &::placeholder {
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--placeholder);
     transition: var(--transition);
   }
 
   &:hover {
     border-bottom-color: var(--clr-primary);
     &::placeholder {
-      color: rgba(78, 225, 160, 0.65);
+      color: var(--placeholder-hover);
     }
   }
 

@@ -41,7 +41,7 @@ const Project = ({
         <h3>{name}</h3>
         <div className='project__tools'>
           {tools.map((tool, index) => (
-            <span className='tool' key={index}>
+            <span className='tool' key={`${index}-${tool}`}>
               {tool}
             </span>
           ))}

@@ -6,12 +6,12 @@ const IconCircle = () => {
       height='129'
       viewBox='0 0 129 129'>
       <circle
-        cx='830.5'
-        cy='585.5'
+        cx='64.5' // Adjusted to fit inside viewBox
+        cy='64.5'
         r='64'
         fill='none'
         stroke='#FFF'
-        transform='translate(-766 -521)'
+        transform='none' // Removed or adjusted transform to keep circle visible
       />
     </svg>
   );
