@@ -1,9 +1,13 @@
 import { Icon } from '../svg';
 import data from '../sociallinks';
 
-const SocialLinks = () => {
+type SocialLinksProps = {
+  ariaLabel: string;
+};
+
+const SocialLinks = ({ ariaLabel }: SocialLinksProps) => {
   return (
-    <section className='social'>
+    <nav className='social' aria-label={ariaLabel}>
       <p>adamkeyes</p>
       <ul className='social__links'>
         {data.map((link) => (
@@ -15,7 +19,7 @@ const SocialLinks = () => {
           </li>
         ))}
       </ul>
-    </section>
+    </nav>
   );
 };
 export default SocialLinks;

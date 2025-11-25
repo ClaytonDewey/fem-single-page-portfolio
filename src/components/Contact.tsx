@@ -16,8 +16,15 @@ const Contact = () => {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-    setErrors({ ...errors, [name]: '' });
+    // Use functional updates to ensure latest state is used
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      [name]: '',
+    }));
   };
 
   const validateInput = () => {
@@ -178,9 +185,7 @@ const Contact = () => {
           </form>
         </div>
         <hr />
-        <nav className='footer__socials' aria-label='Social Media Links'>
-          <SocialLinks />
-        </nav>
+        <SocialLinks ariaLabel='Footer Social Media Links' />
       </footer>
     </>
   );

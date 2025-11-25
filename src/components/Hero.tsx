@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <header className='hero'>
       <nav className='header__socials' aria-label='Social Media Links'>
-        <SocialLinks />
+        <SocialLinks ariaLabel='Social Media Links' />
       </nav>
       <HeaderImage />
       <div className='hero__text'>
