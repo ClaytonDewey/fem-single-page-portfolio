@@ -12,7 +12,6 @@ const HeaderImage = () => {
       <img
         src='./images/image-profile-mobile.webp'
         alt='Adam Keyes'
-        role='presentation'
         className='profile-img'
       />
     </picture>
