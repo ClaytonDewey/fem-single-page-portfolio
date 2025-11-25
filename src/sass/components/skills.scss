@@ -16,22 +16,23 @@
     background: var(--clr-white);
   }
 
-  &::after {
-    content: '';
-    position: absolute;
-    display: block;
-    background-image: var(--header-bg-start);
-    bottom: rem(15);
-    right: rem(-340);
-    height: rem(129);
-    width: rem(530);
-  }
-
   &__wrapper {
     padding-block: rem(40);
     display: flex;
     flex-direction: column;
     gap: rem(24);
+    overflow-x: hidden;
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      background-image: var(--header-bg-start);
+      bottom: rem(15);
+      right: rem(-340);
+      height: rem(129);
+      width: rem(530);
+    }
   }
 
   @include breakpoint(tablet) {
@@ -41,11 +42,6 @@
       display: none;
     }
 
-    &::after {
-      bottom: initial;
-      top: rem(387);
-    }
-
     &__wrapper {
       padding-block-start: rem(52);
       display: grid;
@@ -53,6 +49,12 @@
       grid-template-rows: repeat(3, 1fr);
       grid-column-gap: rem(32);
       grid-row-gap: rem(52);
+
+      &::after {
+        bottom: initial;
+        top: rem(387);
+        right: rem(-400);
+      }
     }
   }
 
@@ -60,16 +62,16 @@
     padding: 0;
     overflow: visible;
 
-    &::after {
-      bottom: initial;
-      top: rem(253);
-    }
-
     &__wrapper {
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, 1fr);
       grid-column-gap: 0px;
-      grid-row-gap: 58px;
+      grid-row-gap: rem(58);
+
+      &::after {
+        bottom: initial;
+        top: rem(253);
+      }
     }
   }
 }
