@@ -28,7 +28,10 @@ const Project = ({
       </div>
       <div className='project__info'>
         <h3>{name}</h3>
-        <ul className='project__tools' aria-label='Tools used in this project'>
+        <h4 id='tools-label' className='sr-only'>
+          Tools used in the project
+        </h4>
+        <ul className='project__tools' aria-labelledby='tools-label'>
           {tools.map((tool, index) => (
             <li className='tool' key={`${index}-${tool}`}>
               {tool}

@@ -10,6 +10,10 @@
     top: 0;
     left: 0;
     right: 0;
+
+    @include breakpoint(desktop) {
+      padding-inline-end: rem(30);
+    }
   }
 
   display: flex;
