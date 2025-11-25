@@ -103,7 +103,7 @@
       }
     }
 
-    @breakpoint (desktop) {
+    @include breakpoint(desktop) {
       h2 {
         font: var(--heading-xl);
         letter-spacing: rem(-2.5);
