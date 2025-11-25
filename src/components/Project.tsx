@@ -6,11 +6,6 @@ type ProjectProps = {
   projectCode: string;
 };
 
-type ProjectButtonsProps = {
-  projectUrl: string;
-  projectCode: string;
-};
-
 const Project = ({
   name,
   thumbnail,
@@ -33,7 +28,7 @@ const Project = ({
       </div>
       <div className='project__info'>
         <h3>{name}</h3>
-        <ul className='project__tools'>
+        <ul className='project__tools' aria-label='Tools used in this project'>
           {tools.map((tool, index) => (
             <li className='tool' key={`${index}-${tool}`}>
               {tool}

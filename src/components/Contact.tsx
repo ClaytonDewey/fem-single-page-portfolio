@@ -157,7 +157,7 @@ const Contact = () => {
               </div>
             </fieldset>
 
-            <div className='contact__form-fieldset'>
+            <fieldset className='contact__form-fieldset'>
               <legend className='sr-only'>Message</legend>
               <div
                 className={`contact__form-group ${
@@ -183,7 +183,7 @@ const Contact = () => {
                   </>
                 )}
               </div>
-            </div>
+            </fieldset>
 
             <Button type='submit' className='btn btn-primary'>
               Send Message
