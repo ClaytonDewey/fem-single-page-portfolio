@@ -21,12 +21,20 @@ textarea {
     transition: var(--transition);
   }
 
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+
   color: var(--clr-white);
 
   &::placeholder {
     color: var(--placeholder);
     @media (prefers-reduced-motion: no-preference) {
       transition: var(--transition);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      transition: none;
     }
   }
 

@@ -17,6 +17,10 @@
     transition: var(--transition);
   }
 
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+
   &-primary {
     text-transform: uppercase;
     color: var(--clr-white);

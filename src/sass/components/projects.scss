@@ -62,7 +62,7 @@
   position: relative;
 
   &__image {
-    .project__buttons {
+    .project__buttons-overlay {
       display: none;
     }
   }
@@ -88,7 +88,8 @@
     list-style: none;
   }
 
-  &__buttons {
+  &__buttons,
+  &__buttons-overlay {
     display: flex;
     align-items: center;
     gap: rem(30);
@@ -103,7 +104,7 @@
       position: relative;
       cursor: pointer;
 
-      .project__buttons {
+      .project__buttons-overlay {
         position: absolute;
         display: flex;
         flex-direction: column;
@@ -116,6 +117,9 @@
         opacity: 0;
         @media (prefers-reduced-motion: no-preference) {
           transition: var(--transition);
+        }
+        @media (prefers-reduced-motion: reduce) {
+          transition: none;
         }
       }
 
@@ -130,12 +134,15 @@
         @media (prefers-reduced-motion: no-preference) {
           transition: var(--transition);
         }
+        @media (prefers-reduced-motion: reduce) {
+          transition: none;
+        }
       }
 
       &:hover,
       &:focus,
       &:focus-within {
-        .project__buttons {
+        .project__buttons-overlay {
           opacity: 1;
         }
         &::before {

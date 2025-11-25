@@ -22,7 +22,7 @@ const Project = ({
     <article className='project'>
       <div className='project__image'>
         <img src={`./images/${thumbnail}`} alt={name} />
-        <div className='project__buttons'>
+        <div className='project__buttons-overlay'>
           <a href={projectUrl} className='btn btn-primary'>
             View Project
           </a>
