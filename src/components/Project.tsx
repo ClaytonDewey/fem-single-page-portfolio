@@ -28,7 +28,7 @@ const Project = ({
       </div>
       <div className='project__info'>
         <h3>{name}</h3>
-        <h4 id='tools-label' className='sr-only'>
+        <h4 id={`${name}-tools-used`} className='sr-only'>
           Tools used in the project
         </h4>
         <ul className='project__tools' aria-labelledby='tools-label'>
