@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/fem-single-page-portfolio/static/css/main.b912af50.css",
-    "main.js": "/fem-single-page-portfolio/static/js/main.9938e627.js",
+    "main.css": "/fem-single-page-portfolio/static/css/main.32d21417.css",
+    "main.js": "/fem-single-page-portfolio/static/js/main.5751d1d2.js",
     "static/js/453.39b04c8e.chunk.js": "/fem-single-page-portfolio/static/js/453.39b04c8e.chunk.js",
     "index.html": "/fem-single-page-portfolio/index.html",
     "static/media/pattern-rings.svg": "/fem-single-page-portfolio/static/media/pattern-rings.e62a24d55bee668faa1f.svg",
     "static/media/pattern-circle.svg": "/fem-single-page-portfolio/static/media/pattern-circle.0e9ea7e2d6255d388d67.svg",
-    "main.b912af50.css.map": "/fem-single-page-portfolio/static/css/main.b912af50.css.map",
-    "main.9938e627.js.map": "/fem-single-page-portfolio/static/js/main.9938e627.js.map",
+    "main.32d21417.css.map": "/fem-single-page-portfolio/static/css/main.32d21417.css.map",
+    "main.5751d1d2.js.map": "/fem-single-page-portfolio/static/js/main.5751d1d2.js.map",
     "453.39b04c8e.chunk.js.map": "/fem-single-page-portfolio/static/js/453.39b04c8e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b912af50.css",
-    "static/js/main.9938e627.js"
+    "static/css/main.32d21417.css",
+    "static/js/main.5751d1d2.js"
   ]
 }

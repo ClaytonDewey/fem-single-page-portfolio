@@ -2,9 +2,9 @@ import skills from '../skills';
 
 const Skills = () => {
   return (
-    <section className='skills'>
+    <section className='skills' aria-labelledby='skills-heading'>
       <div className='skills__wrapper'>
-        <h2 className='sr-only'>Skills</h2>
+        <h2 className='sr-only skills-heading'>Skills</h2>
         {skills.map(({ id, name, years }) => (
           <div key={id} className='skill'>
             <h3 className='skill-name'>{name}</h3>

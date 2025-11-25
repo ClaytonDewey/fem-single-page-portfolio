@@ -3,9 +3,9 @@ import projects from '../projects';
 
 const Projects = () => {
   return (
-    <section className='projects__wrapper'>
+    <section className='projects__wrapper' aria-labelledby='projects-heading'>
       <header className='projects__header'>
-        <h2>Projects</h2>
+        <h2 className='projects-heading'>Projects</h2>
         <ScrollButton text='Contact Me' />
       </header>
       <div className='projects__body'>

@@ -102,6 +102,7 @@ const Contact = () => {
           <form className='contact__form' onSubmit={handleSubmit}>
             <fieldset className='contact__form-fieldset'>
               <legend className='sr-only'>Contact Information</legend>
+
               <div
                 className={`contact__form-group ${
                   errors.name ? 'is-invalid-input' : ''
@@ -154,6 +155,10 @@ const Contact = () => {
                   </>
                 )}
               </div>
+            </fieldset>
+
+            <div className='contact__form-fieldset'>
+              <legend className='sr-only'>Message</legend>
               <div
                 className={`contact__form-group ${
                   errors.message ? 'is-invalid-input' : ''
@@ -178,10 +183,11 @@ const Contact = () => {
                   </>
                 )}
               </div>
-              <Button type='submit' className='btn btn-primary'>
-                Send Message
-              </Button>
-            </fieldset>
+            </div>
+
+            <Button type='submit' className='btn btn-primary'>
+              Send Message
+            </Button>
           </form>
         </div>
         <hr />
