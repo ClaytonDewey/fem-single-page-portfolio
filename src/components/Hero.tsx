@@ -3,7 +3,9 @@ import { HeaderImage, ScrollButton, SocialLinks } from '.';
 const Hero = () => {
   return (
     <header className='hero'>
-      <SocialLinks />
+      <nav className='header__socials' aria-label='Social Media Links'>
+        <SocialLinks />
+      </nav>
       <HeaderImage />
       <div className='hero__text'>
         <h1>

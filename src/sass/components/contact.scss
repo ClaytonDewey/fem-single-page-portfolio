@@ -112,13 +112,17 @@
   }
 
   &__form {
-    display: flex;
-    flex-direction: column;
-    gap: rem(32);
     margin-block-end: rem(87);
 
-    .btn {
-      align-self: flex-end;
+    &-fieldset {
+      display: flex;
+      flex-direction: column;
+      gap: rem(32);
+      border: none;
+
+      .btn {
+        align-self: flex-end;
+      }
     }
 
     &-group {

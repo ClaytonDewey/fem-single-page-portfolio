@@ -4,9 +4,10 @@ const Skills = () => {
   return (
     <section className='skills'>
       <div className='skills__wrapper'>
+        <h2 className='sr-only'>Skills</h2>
         {skills.map(({ id, name, years }) => (
           <div key={id} className='skill'>
-            <h2 className='skill-name'>{name}</h2>
+            <h3 className='skill-name'>{name}</h3>
             <p className='skill-years'>
               {years} {years === 1 ? 'Year Experience' : 'Years Experience'}
             </p>

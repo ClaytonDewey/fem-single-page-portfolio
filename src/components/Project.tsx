@@ -34,18 +34,18 @@ const Project = ({
   return (
     <article className='project'>
       <div className='project__image'>
-        <img src={`./images/${thumbnail}`} alt={`${name} `} />
+        <img src={`./images/${thumbnail}`} alt={name} />
         <ProjectButtons projectUrl={projectUrl} projectCode={projectCode} />
       </div>
       <div className='project__info'>
         <h3>{name}</h3>
-        <div className='project__tools'>
+        <ul className='project__tools'>
           {tools.map((tool, index) => (
-            <span className='tool' key={`${index}-${tool}`}>
+            <li className='tool' key={`${index}-${tool}`}>
               {tool}
-            </span>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
       <ProjectButtons projectUrl={projectUrl} projectCode={projectCode} />
     </article>

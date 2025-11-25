@@ -93,89 +93,94 @@ const Contact = () => {
             </p>
           </div>
           <form className='contact__form' onSubmit={handleSubmit}>
-            <div
-              className={`contact__form-group ${
-                errors.name ? 'is-invalid-input' : ''
-              }`}>
-              <label className='sr-only' htmlFor='name'>
-                Name
-              </label>
-              <Input
-                type='text'
-                id='name'
-                name='name'
-                placeholder='Name'
-                value={formData.name}
-                onChange={handleChange}
-              />
-              {errors.name && (
-                <>
-                  <div className='is-invalid icon'>
-                    <Icon name='info' />
-                  </div>
-                  <div className='is-invalid'>
-                    <p className='error-message'>{errors.name}</p>
-                  </div>
-                </>
-              )}
-            </div>
-            <div
-              className={`contact__form-group ${
-                errors.email ? 'is-invalid-input' : ''
-              }`}>
-              <label className='sr-only' htmlFor='email'>
-                Email
-              </label>
-              <Input
-                type='email'
-                id='email'
-                name='email'
-                placeholder='Email'
-                value={formData.email}
-                onChange={handleChange}
-              />
-              {errors.email && (
-                <>
-                  <div className='is-invalid icon'>
-                    <Icon name='info' />
-                  </div>
-                  <div className='is-invalid'>
-                    <p className='error-message'>{errors.email}</p>
-                  </div>
-                </>
-              )}
-            </div>
-            <div
-              className={`contact__form-group ${
-                errors.message ? 'is-invalid-input' : ''
-              }`}>
-              <label className='sr-only' htmlFor='message'>
-                Message
-              </label>
-              <textarea
-                id='message'
-                name='message'
-                placeholder='Your message'
-                value={formData.message}
-                onChange={handleChange}></textarea>
-              {errors.message && (
-                <>
-                  <div className='is-invalid icon'>
-                    <Icon name='info' />
-                  </div>
-                  <div className='is-invalid'>
-                    <p className='error-message'>{errors.message}</p>
-                  </div>
-                </>
-              )}
-            </div>
-            <Button type='submit' className='btn btn-primary'>
-              Send Message
-            </Button>
+            <fieldset className='contact__form-fieldset'>
+              <legend className='sr-only'>Contact Information</legend>
+              <div
+                className={`contact__form-group ${
+                  errors.name ? 'is-invalid-input' : ''
+                }`}>
+                <label className='sr-only' htmlFor='name'>
+                  Name
+                </label>
+                <Input
+                  type='text'
+                  id='name'
+                  name='name'
+                  placeholder='Name'
+                  value={formData.name}
+                  onChange={handleChange}
+                />
+                {errors.name && (
+                  <>
+                    <div className='is-invalid icon'>
+                      <Icon name='info' />
+                    </div>
+                    <div className='is-invalid'>
+                      <p className='error-message'>{errors.name}</p>
+                    </div>
+                  </>
+                )}
+              </div>
+              <div
+                className={`contact__form-group ${
+                  errors.email ? 'is-invalid-input' : ''
+                }`}>
+                <label className='sr-only' htmlFor='email'>
+                  Email
+                </label>
+                <Input
+                  type='email'
+                  id='email'
+                  name='email'
+                  placeholder='Email'
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+                {errors.email && (
+                  <>
+                    <div className='is-invalid icon'>
+                      <Icon name='info' />
+                    </div>
+                    <div className='is-invalid'>
+                      <p className='error-message'>{errors.email}</p>
+                    </div>
+                  </>
+                )}
+              </div>
+              <div
+                className={`contact__form-group ${
+                  errors.message ? 'is-invalid-input' : ''
+                }`}>
+                <label className='sr-only' htmlFor='message'>
+                  Message
+                </label>
+                <textarea
+                  id='message'
+                  name='message'
+                  placeholder='Your message'
+                  value={formData.message}
+                  onChange={handleChange}></textarea>
+                {errors.message && (
+                  <>
+                    <div className='is-invalid icon'>
+                      <Icon name='info' />
+                    </div>
+                    <div className='is-invalid'>
+                      <p className='error-message'>{errors.message}</p>
+                    </div>
+                  </>
+                )}
+              </div>
+              <Button type='submit' className='btn btn-primary'>
+                Send Message
+              </Button>
+            </fieldset>
           </form>
         </div>
         <hr />
-        <SocialLinks />
+        <nav className='footer__socials' aria-label='Social Media Links'>
+          <SocialLinks />
+        </nav>
       </footer>
     </>
   );

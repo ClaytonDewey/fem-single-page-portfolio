@@ -83,6 +83,9 @@
     gap: rem(18);
     text-transform: uppercase;
     font: var(--body);
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
 
   &__buttons {
