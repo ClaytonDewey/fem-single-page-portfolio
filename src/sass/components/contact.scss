@@ -3,8 +3,8 @@
 .contact {
   position: relative;
   background-color: var(--clr-gray-dark);
-  padding-block: rem(60);
-  padding-inline: rem(16);
+  padding-block: clamp(rem(60), 10vh, rem(120));
+  padding-inline: clamp(rem(16), 4vw, rem(32));
   margin-inline: auto;
   overflow-x: hidden;
 
@@ -20,8 +20,8 @@
   }
 
   @include breakpoint(tablet) {
-    padding-inline: rem(30);
-    padding-block-end: rem(40);
+    padding-inline: clamp(rem(30), 6vw, rem(64));
+    padding-block-end: clamp(rem(20), 5vh, rem(40));
 
     &::before {
       top: rem(547);
@@ -35,7 +35,7 @@
   }
 
   .social {
-    margin-block-start: rem(39);
+    margin-block-start: clamp(rem(40), 8vh, rem(80));
     max-width: var(--max-width);
     margin-inline: auto;
   }
@@ -125,29 +125,26 @@
       }
     }
 
-    &-group {
-      position: relative;
+    &-group.is-invalid-input input,
+    &-group.is-invalid-input textarea {
+      outline: rem(1) solid var(--input-outline-error);
+      border-bottom-color: var(--clr-error);
+      box-shadow: var(--box-shadow-error);
+    }
 
-      &.is-invalid-input input,
-      &.is-invalid-input textarea {
-        outline: rem(1) solid var(--input-outline-error);
-        border-bottom-color: var(--clr-error);
-        box-shadow: var(--box-shadow-error);
-
-        &::placeholder {
-          color: var(--clr-error);
-        }
-      }
+    &-group.is-invalid-input input::placeholder,
+    &-group.is-invalid-input textarea::placeholder {
+      color: var(--clr-error);
     }
 
     @include breakpoint(tablet) {
-      margin-block-end: rem(92);
+      margin-block-end: clamp(rem(60), 12vh, rem(92));
     }
   }
 }
 
 .success-toast {
-  padding: rem(16);
+  padding: clamp(rem(16), 2vw, rem(24));
   position: relative;
   text-align: center;
   display: flex;

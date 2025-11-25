@@ -5,19 +5,19 @@
     display: flex;
     flex-direction: column;
     gap: rem(40);
-    padding-inline: rem(16);
-    padding-block-end: rem(80);
+    padding-inline: clamp(rem(16), 4vw, rem(32));
+    padding-block-end: clamp(rem(80), 10vw, rem(140));
 
     @include breakpoint(tablet) {
-      padding-inline: rem(30);
+      padding-inline: clamp(rem(30), 4vw, rem(60));
       gap: rem(60);
-      padding-block-end: rem(100);
+      padding-block-end: clamp(rem(100), 12vw, rem(120));
     }
 
     @include breakpoint(desktop) {
       padding: 0;
-      padding-block-start: rem(140);
-      padding-block-end: rem(139);
+      padding-block-start: clamp(rem(100), 14vw, rem(140));
+      padding-block-end: clamp(rem(140), 16vw, rem(180));
       max-width: var(--max-width);
       margin-inline: auto;
     }
@@ -105,9 +105,7 @@
 
       .project__buttons {
         position: absolute;
-        display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
         gap: rem(48);
         top: 0;
@@ -115,7 +113,9 @@
         width: 100%;
         z-index: 20;
         opacity: 0;
-        transition: var(--transition);
+        @media (prefers-reduced-motion: no-preference) {
+          transition: var(--transition);
+        }
       }
 
       &::before {
@@ -126,7 +126,9 @@
         width: 100%;
         background: var(--overlay-bg);
         opacity: 0;
-        transition: var(--transition);
+        @media (prefers-reduced-motion: no-preference) {
+          transition: var(--transition);
+        }
       }
 
       &:hover,

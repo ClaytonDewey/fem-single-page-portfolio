@@ -1,6 +1,10 @@
 @use '../util' as *;
 
 .hero {
+  br {
+    display: none;
+  }
+
   .social {
     position: absolute;
     top: 0;
@@ -16,8 +20,8 @@
   margin-inline: auto;
   position: relative;
   overflow-x: hidden;
-  padding-inline: rem(16);
-  padding-block-end: rem(80);
+  padding-inline: clamp(rem(16), 4vw, rem(32));
+  padding-block-end: clamp(rem(80), 10vw, rem(140));
 
   &::before,
   &::after {
@@ -65,6 +69,10 @@
   }
 
   @include breakpoint(tablet) {
+    br {
+      display: block;
+    }
+
     height: rem(660);
     padding-block-end: rem(60);
     flex-direction: row;
@@ -91,7 +99,7 @@
         font-size: rem(72);
         line-height: rem(72);
         letter-spacing: rem(-2.05);
-        margin-block-end: rem(60);
+        margin-block-end: clamp(rem(60), 8vw, rem(80));
 
         span {
           border-width: rem(6);
@@ -99,17 +107,22 @@
       }
 
       p {
-        margin-block-end: rem(34);
+        margin-block-end: clamp(rem(32), 4vw, rem(48));
       }
     }
   }
 
   @include breakpoint(desktop) {
+    br {
+      display: none;
+    }
+
     height: rem(720);
+    gap: 0;
     overflow: visible;
     padding: 0;
     align-items: center;
-    margin-block-end: rem(72);
+    margin-block-end: clamp(rem(64), 10vw, rem(80));
 
     &::before {
       top: rem(133);

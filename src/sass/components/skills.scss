@@ -4,9 +4,9 @@
   position: relative;
   width: 100%;
   max-width: var(--max-width);
-  padding-inline: rem(16);
+  padding-inline: clamp(rem(16), 4vw, rem(32));
   margin-inline: auto;
-  padding-block-end: rem(80);
+  padding-block-end: clamp(rem(80), 10vw, rem(140));
   overflow-x: hidden;
 
   &::before {
@@ -17,7 +17,7 @@
   }
 
   &__wrapper {
-    padding-block: rem(40);
+    padding-block: clamp(rem(40), 6vw, rem(80));
     display: flex;
     flex-direction: column;
     gap: rem(24);
@@ -36,14 +36,14 @@
   }
 
   @include breakpoint(tablet) {
-    padding-inline: rem(30);
+    padding-inline: clamp(rem(30), 4vw, rem(60));
 
     hr {
       display: none;
     }
 
     &__wrapper {
-      padding-block-start: rem(52);
+      padding-block-start: clamp(rem(52), 8vw, rem(100));
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(3, 1fr);
@@ -65,7 +65,7 @@
     &__wrapper {
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, 1fr);
-      grid-column-gap: 0px;
+      grid-column-gap: 0;
       grid-row-gap: rem(58);
 
       &::after {

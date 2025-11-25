@@ -9,7 +9,8 @@ const Hero = () => {
       <HeaderImage />
       <div className='hero__text'>
         <h1>
-          Nice to meet you! I&rsquo;m <span>Adam Keyes</span>.
+          Nice to <br />
+          meet you! I&rsquo;m <span>Adam Keyes</span>.
         </h1>
         <p>
           Based in the UK, I&rsquo;m a front-end developer passionate about
