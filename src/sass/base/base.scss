@@ -24,10 +24,7 @@ body {
 
 body {
   position: relative;
-
-  @include breakpoint(desktop) {
-    overflow-x: hidden;
-  }
+  overflow-x: hidden;
 }
 
 .sr-only {
