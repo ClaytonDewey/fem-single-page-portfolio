@@ -76,6 +76,9 @@ const Contact = () => {
         containerStyle={{
           top: '50%',
           left: '50%',
+          width: '80vw',
+          marginInline: 'auto',
+          maxWidth: '500px',
           transform: 'translate(-50%, -50%)',
         }}
       />

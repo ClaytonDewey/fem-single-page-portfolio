@@ -126,7 +126,9 @@
         transition: var(--transition);
       }
 
-      &:hover {
+      &:hover,
+      &:focus,
+      &:focus-within {
         .project__buttons {
           opacity: 1;
         }

@@ -30,6 +30,7 @@
     }
 
     &:focus {
+      color: var(--clr-primary);
       outline: rem(1) solid var(--input-outline);
       border-bottom-color: var(--clr-primary);
       box-shadow: var(--box-shadow);

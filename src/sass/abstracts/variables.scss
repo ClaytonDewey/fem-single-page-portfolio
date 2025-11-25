@@ -26,11 +26,11 @@
 
   // Misc
   --overlay-bg: rgba(21, 21, 21, 0.75);
-  --box-shadow: 0 0 #{rem(15)} rgba(78, 225, 160, 0.25);
-  --box-shadow-error: 0 0 #{rem(15)} rgba(255, 111, 91, 0.25);
+  --box-shadow: 0 0 #{rem(15)} rgba(78, 225, 160, 0.5);
+  --box-shadow-error: 0 0 #{rem(15)} rgba(255, 111, 91, 0.5);
 
-  --input-outline: rgba(78, 225, 160, 0.1);
-  --input-outline: rgba(255, 111, 91, 0.1);
+  --input-outline: rgba(78, 225, 160, 0.25);
+  --input-outline-error: rgba(255, 111, 91, 0.25);
 
   // Transitions
   @media (prefers-reduced-motion: no-preference) {
