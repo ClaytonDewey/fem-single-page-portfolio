@@ -88,8 +88,11 @@
     list-style: none;
   }
 
-  &__buttons,
   &__buttons-overlay {
+    display: none;
+  }
+
+  &__buttons {
     display: flex;
     align-items: center;
     gap: rem(30);
@@ -107,6 +110,7 @@
       .project__buttons-overlay {
         position: absolute;
         display: flex;
+        align-items: center;
         flex-direction: column;
         justify-content: center;
         gap: rem(48);
