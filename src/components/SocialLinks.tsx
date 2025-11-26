@@ -8,7 +8,7 @@ type SocialLinksProps = {
 const SocialLinks = ({ ariaLabel }: SocialLinksProps) => {
   return (
     <div className='social'>
-      <p>adamkeyes</p>
+      <div className='username'>adamkeyes</div>
       <nav aria-label={ariaLabel}>
         <ul className='social__links'>
           {data.map((link) => (

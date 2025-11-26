@@ -13,6 +13,8 @@ const Project = ({
   projectUrl,
   projectCode,
 }: ProjectProps) => {
+  const projectNameId = name.toLowerCase().replace(/\s+/g, '-');
+
   return (
     <article className='project'>
       <div className='project__image'>
@@ -20,18 +22,22 @@ const Project = ({
         <div className='project__buttons-overlay'>
           <a href={projectUrl} className='btn btn-primary'>
             View Project
+            <span className='sr-only'>{name}</span>
           </a>
           <a href={projectCode} className='btn btn-primary'>
             View Code
+            <span className='sr-only'>for {name}</span>
           </a>
         </div>
       </div>
       <div className='project__info'>
         <h3>{name}</h3>
-        <h4 id={`${name}-tools-used`} className='sr-only'>
+        <h4 id={`${projectNameId}-tools-used`} className='sr-only'>
           Tools used in the project
         </h4>
-        <ul className='project__tools' aria-labelledby='tools-label'>
+        <ul
+          className='project__tools'
+          aria-labelledby={`${projectNameId}-tools-used`}>
           {tools.map((tool, index) => (
             <li className='tool' key={`${index}-${tool}`}>
               {tool}

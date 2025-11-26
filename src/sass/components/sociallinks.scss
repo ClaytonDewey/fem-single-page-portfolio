@@ -9,7 +9,7 @@
   margin-block-start: rem(20);
   gap: rem(20);
 
-  p {
+  .username {
     font: normal normal 700 #{rem(24)} / #{rem(32)} var(--ff-primary);
     letter-spacing: rem(-0.33);
     text-align: center;
@@ -51,7 +51,7 @@
     gap: 0;
     z-index: 100;
 
-    p {
+    .username {
       font-size: rem(32);
       letter-spacing: rem(-0.44);
       text-align: left;
