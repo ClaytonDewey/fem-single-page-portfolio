@@ -30,6 +30,7 @@ const Project = ({
           </a>
         </div>
       </div>
+      {/* Test comment */}
       <div className='project__info'>
         <h3>{name}</h3>
         <h4 id={`${projectNameId}-tools-used`} className='sr-only'>
